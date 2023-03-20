@@ -1,0 +1,34 @@
+.FooterAll{
+    border: 1px solid black;
+    padding-top: 50px;
+    margin-top: 20px;
+    background-color: black;
+    height: 150px;
+}
+.iconFooter{
+    display: flex;
+    justify-content: space-around;
+}
+
+.img img{
+    margin-left: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 80px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+.img img:hover{
+    width: 55px;
+    height: 55px;
+}
+.copyRight{
+    color: white;
+}
+.copyRight span{
+    color: white;
+    font-size: 18px;
+}
+.USA{
+    font-size: 20px;
+}

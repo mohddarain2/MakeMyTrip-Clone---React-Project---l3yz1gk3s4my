@@ -14,7 +14,7 @@ export const DataParentContext = React.createContext();
 
 const App = () => {
   const [LoginDetails, setLoginDetails] = useState([])
-  console.log("garima", LoginDetails)
+  //console.log("garima", LoginDetails)
   return (
     <>
       <BrowserRouter>

@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     const localContext = useContext(DataParentContext);
     // const { LoginDetails } = localContext;
-    console.log("shiv",localContext)
+    //console.log("shiv",localContext)
     return (
         <div className='NavbarContainer'>
             <div className="logo">
@@ -25,7 +25,7 @@ const Navbar = () => {
             <Link className="navlinks" to="/login">Log In</Link>
             <Link className="navlinks" to="/signUp">Sign Up</Link>
             <div className='DashboardPortal'>
-            {localContext.LoginDetails.length>0 &&   <button>{localContext.LoginDetails[0].userName}</button>}
+            {localContext.LoginDetails.length>0 &&   <button className='btn-btn'>{"Hi  "+localContext.LoginDetails[0].userName}</button>}
             </div>
 
         </div>

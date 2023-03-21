@@ -4,7 +4,7 @@ import Optionss from './Optionss.jsx';
 
 
 const SearchContent = ({data}) => {
-  console.log(data)
+  //console.log(data)
   return (
     <div className="SearchContentContainer">
     {data==="Flight" &&<span className='BIDF'>Book International and Domestic Flights</span>}

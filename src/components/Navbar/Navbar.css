@@ -42,8 +42,18 @@
     padding-top: 20px;
     padding-right: 30px;
 }
-.btn-btn{
-    width: 70px;
-    padding: 5px;
+.logoutClick{
+    position: fixed;
+    top: 30;
+    left: 800;
+    right: 100;
     background-color: white;
+    z-index: 1000;
+    border-radius: 15px;
+    border: 2px solid red;
+    background: rgb(19,65,117);
+}
+.done{
+    color: white;
+    font-size: 15px;
 }

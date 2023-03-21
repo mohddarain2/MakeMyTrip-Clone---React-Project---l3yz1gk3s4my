@@ -5,12 +5,11 @@ import Payment from "../../Logo/payment.png"
 const Modal = ({setData,data,modelData,index,fakeString}) => {
     const cancel = ()=>{
         let list = [...data]
-       
         list[index].isAnkur = !list[index].isAnkur
         setData(list)       
     }
     
-    console.log(modelData)
+    // console.log(modelData)
     const [success, setSuccess] = useState(false);
     return (
         <>

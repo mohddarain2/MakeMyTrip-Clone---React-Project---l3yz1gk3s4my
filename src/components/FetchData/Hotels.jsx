@@ -13,8 +13,6 @@ const Second=()=>{
 
 const Hotels = () => {
     const [data, setData] = useState([]);
-    const [isOpen, setIsOpen] = useState(false);
-    const [modelData,setModelData] =useState([])
     const [loader, setLoader] = useState(false);
 
     

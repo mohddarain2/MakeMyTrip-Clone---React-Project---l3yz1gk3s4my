@@ -3,10 +3,12 @@ import './Login.css'
 import Facebook from '../../Logo/facebook.png'
 import Google from '../../Logo/Google.png'
 import { Link } from 'react-router-dom';
+
 // import { DataParentContext } from '../App';
 import { useNavigate } from 'react-router-dom';
 const Login = ({setLoginDetails}) => {
     const navegate = useNavigate();
+
     // const localContext = useContext(DataParentContext);
     // const { LoginDetails, setLoginDetails } = localContext;
     // console.log("ankur", LoginDetails)

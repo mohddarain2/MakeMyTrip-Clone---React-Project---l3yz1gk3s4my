@@ -44,16 +44,36 @@
 }
 .logoutClick{
     position: fixed;
+    width: 110px;
+    height: 40px;
     top: 30;
     left: 800;
     right: 100;
-    background-color: white;
     z-index: 1000;
     border-radius: 15px;
     border: 2px solid red;
-    background: rgb(19,65,117);
+    background-color: white;
+    
 }
 .done{
-    color: white;
+    
+    color: black;
     font-size: 15px;
+    display: flex;
+    justify-content: center;
+    
+}
+.btn-btn{
+    font-size: 17px;
+    /* background: #000; */
+    color: black;
+    cursor: pointer;
+    border-radius: 10px;
+    /* text-transform: uppercase; */
+    text-transform: capitalize;
+}
+
+.DownKey{
+
+    width: 23px;
 }

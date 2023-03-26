@@ -4,7 +4,8 @@ import MMT from '../../Logo/MMTLogo.png';
 import Flight from '../../Logo/flight.svg';
 import Hotels from '../../Logo/hotels.svg';
 import Train from '../../Logo/trn.png';
-import SignUp from '../SignUP/SignUp'
+import DownKey from '../../Logo/DownKey.svg';
+
 import LogOutModal from './LogOutModal';
 import { DataParentContext } from '../App';
 
@@ -13,8 +14,8 @@ const Navbar = () => {
     const [modalBtn, setModalBtn] = useState(false)
     const localContext = useContext(DataParentContext);
     const onOff = () => {
-        setModalBtn(true)
-        //console.log("darain")
+        setModalBtn(!modalBtn)
+        console.log(modalBtn)
     }
     useEffect(() => {
         console.log(modalBtn)
@@ -33,7 +34,7 @@ const Navbar = () => {
 
             <div className='DashboardPortal'>
                 {localContext.LoginDetails.length > 0 ? <><button className='btn-btn' onClick={() => onOff()}>
-                    {"Hi " + localContext.LoginDetails[0].userName}
+                    {"Hi " + localContext.LoginDetails[0].userName  } <img src={DownKey} alt="DownKey"  className="DownKey"/>
                 </button>
                     {
                         modalBtn && <LogOutModal setModalBtn={setModalBtn} />

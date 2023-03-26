@@ -24,10 +24,10 @@ const App = () => {
           <Routes>
             <Route path='/login' element={<Login setLoginDetails={setLoginDetails} />} />
             <Route path='/signUp' element={<SignUp />} />
-            <Route path='/' element={<ApiFetch />} />
             <Route path='/hotels' element={<Hotels />} />
             <Route path='/trains' element={<TrainsApi />} />
             <Route path='/*' element={<NotFound />} />
+            <Route path='/' element={<ApiFetch />} />
           </Routes>
           <Footer />
         </DataParentContext.Provider>

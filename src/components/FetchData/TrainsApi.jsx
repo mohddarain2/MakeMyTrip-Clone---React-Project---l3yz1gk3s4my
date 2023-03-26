@@ -65,7 +65,7 @@ const TrainsApi = () => {
                                 {
                                     item.isAnkur && <Modal setData={setData} index={index} data={data} modelData={item} fakeString="train"/>
                                 }
-                            </div>
+                            </div>  
                         </div>
                     </div>
                 ))

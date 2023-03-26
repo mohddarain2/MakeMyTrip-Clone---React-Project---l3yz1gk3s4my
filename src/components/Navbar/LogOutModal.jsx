@@ -11,7 +11,7 @@ const LogOutModal = ({setModalBtn}) => {
 
   return (
     <div className='logoutClick'>
-      <Link className="navlinks" to="/login"><div onClick={guide} className="done">Log Out</div></Link>
+      <Link className="navlinks" to="/login"><div onClick={guide} className="done">LOG OUT</div></Link>
     </div>
   )
 }

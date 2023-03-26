@@ -6,10 +6,6 @@ import SearchContent from '../Navbar/SearchContent';
 
 import './ApiFetch.css';
 
-const Second=()=>{ 
-    console.log("danish")
-    return( <h1>danish</h1> ) 
-}
 
 const Hotels = () => {
     const [data, setData] = useState([]);

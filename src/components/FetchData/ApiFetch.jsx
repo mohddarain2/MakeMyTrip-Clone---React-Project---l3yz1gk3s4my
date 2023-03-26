@@ -14,7 +14,6 @@ const ApiFetch = () => {
         let list = [...data]
         list[index].isAnkur = !list[index].isAnkur
         setData(list)
-       
     }
 
     const getApi = async () => {

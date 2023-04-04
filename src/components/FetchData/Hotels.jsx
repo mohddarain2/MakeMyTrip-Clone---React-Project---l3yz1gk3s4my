@@ -13,8 +13,10 @@ const Hotels = () => {
 
     
     const popUp = (index) => {
+
+        
         let list = [...data]
-        list[index].isAnkur = !list[index].isAnkur
+        list[index].isDarain = !list[index].isDarain
         setData(list)
         
         //setModelData(item)
@@ -26,7 +28,7 @@ const Hotels = () => {
         const data = await response.json();
         setTimeout(() => {
          data.map((item)=>[
-            item.isAnkur=false
+            item.isDarain=false
          ])
             setData(data);
             setLoader(false)
@@ -70,7 +72,7 @@ const Hotels = () => {
                                 <div className="BookBtn">   
                                     <button onClick={()=>popUp(index)}>BOOK NOW</button>
                                     {
-                                     item.isAnkur && <Modal setData={setData} index={index} data={data} modelData={item}  fakeString="hotel"/>
+                                     item.isDarain && <Modal setData={setData} index={index} data={data} modelData={item}  fakeString="hotel"/>
                                     }   
                                 </div>
                             </div>

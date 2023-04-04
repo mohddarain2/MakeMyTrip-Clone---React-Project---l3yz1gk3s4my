@@ -12,7 +12,7 @@ const ApiFetch = () => {
 
     const popUp = (index) => {
         let list = [...data]
-        list[index].isAnkur = !list[index].isAnkur
+        list[index].isDarain = !list[index].isDarain
         setData(list)
     }
 
@@ -71,7 +71,7 @@ const ApiFetch = () => {
                             <div className="BookBtn">
                                 <button onClick={() => popUp(index)}>BOOK NOW</button>
                                 {
-                                     item.isAnkur && <Modal setData={setData} index={index} data={data} modelData={item}  fakeString="flight"/>
+                                     item.isDarain && <Modal setData={setData} index={index} data={data} modelData={item}  fakeString="flight"/>
                                     } 
                             </div>
                         </div>

@@ -33,6 +33,7 @@ const SignUp = () => {
             localStorage.setItem("userName", userName)
             localStorage.setItem("email", email)
             localStorage.setItem("password", password)
+            // localStorage.setItem("logIn",true)
             alert("Registered Successfully");
             navegate('/login')
         }

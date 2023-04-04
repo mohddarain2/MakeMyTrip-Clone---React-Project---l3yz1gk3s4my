@@ -14,7 +14,7 @@ const TrainsApi = () => {
 
         let list = [...data]
 
-        list[index].isAnkur = !list[index].isAnkur
+        list[index].isDarain = !list[index].isDarain
         setData(list)
 
     }
@@ -63,7 +63,7 @@ const TrainsApi = () => {
                             <div className="BookBtn">
                                 <button onClick={() => popUp(index)}>BOOK NOW</button>
                                 {
-                                    item.isAnkur && <Modal setData={setData} index={index} data={data} modelData={item} fakeString="train"/>
+                                    item.isDarain && <Modal setData={setData} index={index} data={data} modelData={item} fakeString="train"/>
                                 }
                             </div>  
                         </div>

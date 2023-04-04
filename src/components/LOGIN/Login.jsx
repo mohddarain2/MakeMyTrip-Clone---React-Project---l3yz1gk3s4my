@@ -37,16 +37,18 @@ const Login = ({ setLoginDetails }) => {
            
         } else {
             if (email === localStorage.getItem("email") && password === localStorage.getItem("password")) {
+                localStorage.setItem("logIn",true)
                 let obj = [{
                     userName: localStorage.getItem("userName"),
                     email: localStorage.getItem("email"),
                     password: localStorage.getItem("password")
+
                 }]
                 setLoginDetails(obj)
                 alert("Login Successfully ...");
                 navegate('/')
             }
-
+//darain
         }
     }
     return (

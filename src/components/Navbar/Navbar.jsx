@@ -5,7 +5,7 @@ import Flight from '../../Logo/flight.svg';
 import Hotels from '../../Logo/hotels.svg';
 import Train from '../../Logo/trn.png';
 import DownKey from '../../Logo/DownKey.svg';
-
+import Download from '../../Logo/download.svg';
 import LogOutModal from './LogOutModal';
 import { DataParentContext } from '../App';
 
@@ -36,6 +36,7 @@ const Navbar = () => {
             <Link className="navlinks" to="/"><img id="dd" src={Flight} alt="Flight-logo" />Flights</Link>
             <Link className="navlinks" to="/hotels"><img src={Hotels} alt="Hotels-logo" />Hotels</Link>
             <Link className="navlinks" to="/trains"><img src={Train} alt="Train-logo" />Trains</Link>
+            <a className='navlinks' href='https://play.google.com/store/apps/details?id=com.makemytrip&%24web_only=true&_branch_match_id=1118781899257453167&_branch_referrer=H4sIAAAAAAAAAw3KSQoAIAgAwB%2Flvd9IBkm5YEL0%2B5rzjEzfFQDdF%2BvcRXB2uRnspZlAB1QKY%2FqB7OgypAe6NG0fNAAAAA%3D%3D' target='_blank'><img src={Download} alt="Train-logo" />Download App Now !</a>
 
 
             <div className='DashboardPortal'>

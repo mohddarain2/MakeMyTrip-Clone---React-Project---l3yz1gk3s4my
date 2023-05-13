@@ -26,7 +26,7 @@
 
 .navlinks:hover {
     color: red;
-    border-bottom: 3px solid red;
+   
 }
 
 .navlinks img {
@@ -63,6 +63,9 @@
     justify-content: center;
     
 }
+/* .done :hover{
+    border: none;
+} */
 .btn-btn{
     font-size: 17px;
     /* background: #000; */

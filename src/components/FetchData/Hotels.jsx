@@ -3,22 +3,27 @@ import Book from '../../Logo/BookHotels.png';
 import { ColorRing } from 'react-loader-spinner';
 import Modal from '../Modal/Modal';
 import SearchContent from '../Navbar/SearchContent';
-
+import { useNavigate } from 'react-router-dom';
 import './ApiFetch.css';
 
 
 const Hotels = () => {
     const [data, setData] = useState([]);
     const [loader, setLoader] = useState(false);
-
+    const navegate = useNavigate();
     
     const popUp = (index) => {
 
-        
+
+        let loginCheck = localStorage.getItem("logIn")
+        if (!loginCheck) {
+            alert("Please Login ");
+            navegate("/login")
+        } else {
         let list = [...data]
         list[index].isDarain = !list[index].isDarain
         setData(list)
-        
+        }
         //setModelData(item)
         // console.log("pops",item)
     }
@@ -32,7 +37,7 @@ const Hotels = () => {
          ])
             setData(data);
             setLoader(false)
-        },1000)   
+        },300)   
     }
     useEffect(() => {
         getApi();

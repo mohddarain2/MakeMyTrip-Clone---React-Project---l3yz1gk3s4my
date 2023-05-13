@@ -48,7 +48,7 @@ const Login = ({ setLoginDetails }) => {
                 alert("Login Successfully ...");
                 navegate('/')
             }
-//darain
+
         }
     }
     return (

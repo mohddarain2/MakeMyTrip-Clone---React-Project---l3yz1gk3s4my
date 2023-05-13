@@ -1,30 +1,41 @@
 import React from 'react'
 
-const Optionss = ({ data }) => {
+const Optionss = ({ data,setSelectSeacrhTo,setSelectSeacrhFrom }) => {
+
+    const serchOptionsfrom=(e)=>{
+        console.log("serchOptionsFrom",e.target.value)
+        setSelectSeacrhFrom(e.target.value)
+    }
+
+    const serchOptionsTo=(e)=>{
+        console.log("serchOptionsTo",e.target.value)
+        setSelectSeacrhTo(e.target.value)
+    }
+
     return (
         <>
             {data === "Flight" && <>
                 <div className='from' >
                     <label htmlFor="" className='labels'><b>From</b></label><br />
-                    <select name="" id="" className='All' >
+                    <select name="" id="" className='All' onChange={serchOptionsfrom}>
                         <option className='opt' value="" disabled >Select City</option>
-                        <option className='opt' value="" >Delhi</option>
-                        <option className='opt' value="" >Mumbai</option>
-                        <option className='opt' value="" >Kolkata</option>
-                        <option className='opt' value="" >Chennai</option>
-                        <option className='opt' value="" >Goa</option>
+                        <option className='opt' value="delhi" >Delhi</option>
+                        <option className='opt' value="mumbai" >Mumbai</option>
+                        <option className='opt' value="kolkata" >Kolkata</option>
+                        <option className='opt' value="chennai" >Chennai</option>
+                        <option className='opt' value="goa" >Goa</option>
                     </select>
                 </div>
                 <div className='To'>
                     <label htmlFor="" className='labels'><b>To</b></label><br />
-                    <select className='All'>
+                    <select className='All' onChange={serchOptionsTo}>
 
                         <option className='opt' value="" disabled >Select City</option>
-                        <option className='opt' value="" >Mumbai</option>
-                        <option className='opt' value="" >Bangalore</option>
-                        <option className='opt' value="" >Kolkata</option>
-                        <option className='opt' value="" >Chennai</option>
-                        <option className='opt' value="" >Goa</option>
+                        <option className='opt' value="mumbai" >Mumbai</option>
+                        <option className='opt' value="bangalore" >Bangalore</option>
+                        <option className='opt' value="kolkata" >Kolkata</option>
+                        <option className='opt' value="chennai" >Chennai</option>
+                        <option className='opt' value="goa" >Goa</option>
                     </select>
                 </div>
                 <div className='Departure '>

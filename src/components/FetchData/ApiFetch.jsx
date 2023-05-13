@@ -4,16 +4,24 @@ import Modal from '../Modal/Modal';
 import './ApiFetch.css';
 import SearchContent from '../Navbar/SearchContent';
 import { ColorRing } from 'react-loader-spinner';
+import { useNavigate } from 'react-router-dom';
 
 const ApiFetch = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const navegate = useNavigate();
     const [data, setData] = useState([]);
     const [loader, setLoader] = useState(false);
 
     const popUp = (index) => {
+        let loginCheck = localStorage.getItem("logIn")
+        if (!loginCheck) {
+            alert("Please Login ");
+            navegate("/login")
+        } else {
         let list = [...data]
         list[index].isDarain = !list[index].isDarain
         setData(list)
+        }
+       
     }
 
     const getApi = async () => {
@@ -30,7 +38,7 @@ const ApiFetch = () => {
             setData(data);
             setLoader(false)
 
-        }, 2000)
+        }, 300)
 
     }
     useEffect(() => {

@@ -11,15 +11,21 @@ import { DataParentContext } from '../App';
 
 import { Link } from 'react-router-dom';
 const Navbar = () => {
-    const [modalBtn, setModalBtn] = useState(false)
-    const localContext = useContext(DataParentContext);
+    const localcontextModal = useContext(DataParentContext)
+   
+
+    const {modalBtn,setModalBtn}=localcontextModal
+    let loginCheck = localStorage.getItem("logIn")
+    let userName = localStorage.getItem("userName")
+    // console.log(loginCheck,"loginCheck");
+    // console.log(userName,"userName.....");
+
     const onOff = () => {
         setModalBtn(!modalBtn)
-        console.log(modalBtn)
     }
-    useEffect(() => {
-        console.log(modalBtn)
-    })
+     useEffect(() => {
+       console.log("modalBtn",modalBtn)
+     })
     return (
         <div className='NavbarContainer'>
             <div className="logo">
@@ -33,8 +39,8 @@ const Navbar = () => {
 
 
             <div className='DashboardPortal'>
-                {localContext.LoginDetails.length > 0 ? <><button className='btn-btn' onClick={() => onOff()}>
-                    {"Hi " + localContext.LoginDetails[0].userName  } <img src={DownKey} alt="DownKey"  className="DownKey"/>
+                {loginCheck ?  <><button className='btn-btn' onClick={() => onOff()}>
+                    {"Hi " + userName  } <img src={DownKey} alt="DownKey"  className="DownKey"/>
                 </button>
                     {
                         modalBtn && <LogOutModal setModalBtn={setModalBtn} />

@@ -14,13 +14,14 @@ export const DataParentContext = React.createContext();
 
 const App = () => {
   const [LoginDetails, setLoginDetails] = useState([])
-  //console.log("garima", LoginDetails)
+  // 
+  const [modalBtn, setModalBtn] = useState(false)
   return (
-    <>
+    <div onBlur={()=>{setModalBtn(false)}}>
       <BrowserRouter>
-        <DataParentContext.Provider value={{ LoginDetails, setLoginDetails }} >
+        <DataParentContext.Provider value={{ LoginDetails, setLoginDetails,modalBtn ,setModalBtn}} >
           <Navbar />
-
+          
           <Routes>
             <Route path='/login' element={<Login setLoginDetails={setLoginDetails} />} />
             <Route path='/signUp' element={<SignUp />} />
@@ -32,7 +33,7 @@ const App = () => {
           <Footer />
         </DataParentContext.Provider>
       </BrowserRouter>
-    </>
+    </div>
   )
 }
 

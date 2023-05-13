@@ -4,18 +4,28 @@ import './ApiFetch.css';
 import Modal from '../Modal/Modal';
 import SearchContent from '../Navbar/SearchContent';
 import { ColorRing } from 'react-loader-spinner';
+import { useNavigate } from 'react-router-dom';
 
 const TrainsApi = () => {
+
+    const navegate = useNavigate();
     const [data, setData] = useState([]);
     const [isOpen, setIsOpen] = useState(false);
     const [loader, setLoader] = useState(false);
 
     const popUp = (index) => {
 
-        let list = [...data]
 
-        list[index].isDarain = !list[index].isDarain
-        setData(list)
+        let loginCheck = localStorage.getItem("logIn")
+        if (!loginCheck) {
+            alert("Please Login ");
+            navegate("/login")
+        } else {
+
+            let list = [...data]
+            list[index].isDarain = !list[index].isDarain
+            setData(list)
+        }
 
     }
     const getApi2 = async () => {
@@ -25,7 +35,7 @@ const TrainsApi = () => {
         setTimeout(() => {
             setData(data);
             setLoader(false)
-        }, 1000)
+        }, 300)
     }
     useEffect(() => {
         getApi2();
@@ -63,9 +73,9 @@ const TrainsApi = () => {
                             <div className="BookBtn">
                                 <button onClick={() => popUp(index)}>BOOK NOW</button>
                                 {
-                                    item.isDarain && <Modal setData={setData} index={index} data={data} modelData={item} fakeString="train"/>
+                                    item.isDarain && <Modal setData={setData} index={index} data={data} modelData={item} fakeString="train" />
                                 }
-                            </div>  
+                            </div>
                         </div>
                     </div>
                 ))
